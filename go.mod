@@ -1,6 +1,6 @@
-module github.com/groovili/go-dynamock-v2
+module github.com/KevinGlinski/go-dynamock-v2
 
-go 1.12
+go 1.15
 
 require (
 	github.com/aws/aws-sdk-go-v2 v0.24.0
