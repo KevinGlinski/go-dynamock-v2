@@ -25,6 +25,7 @@ func (e *MockDynamoDB) QueryRequest(input *dynamodb.QueryInput) dynamodb.QueryRe
 	req := dynamodb.QueryRequest{
 		Request: &aws.Request{
 			HTTPRequest: &http.Request{},
+			Retryer: aws.NoOpRetryer{},
 		},
 	}
 

@@ -24,6 +24,7 @@ func (e *MockDynamoDB) BatchGetItemRequest(input *dynamodb.BatchGetItemInput) dy
 	req := dynamodb.BatchGetItemRequest{
 		Request: &aws.Request{
 			HTTPRequest: &http.Request{},
+			Retryer: aws.NoOpRetryer{},
 		},
 	}
 

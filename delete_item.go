@@ -33,6 +33,7 @@ func (e *MockDynamoDB) DeleteItemRequest(input *dynamodb.DeleteItemInput) dynamo
 	req := dynamodb.DeleteItemRequest{
 		Request: &aws.Request{
 			HTTPRequest: &http.Request{},
+			Retryer: aws.NoOpRetryer{},
 		},
 	}
 

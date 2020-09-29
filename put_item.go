@@ -31,6 +31,7 @@ func (e *MockDynamoDB) PutItemRequest(input *dynamodb.PutItemInput) dynamodb.Put
 	req := dynamodb.PutItemRequest{
 		Request: &aws.Request{
 			HTTPRequest: &http.Request{},
+			Retryer: aws.NoOpRetryer{},
 		},
 	}
 

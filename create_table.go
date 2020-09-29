@@ -30,6 +30,7 @@ func (e *MockDynamoDB) CreateTableRequest(input *dynamodb.CreateTableInput) dyna
 	req := dynamodb.CreateTableRequest{
 		Request: &aws.Request{
 			HTTPRequest: &http.Request{},
+			Retryer: aws.NoOpRetryer{},
 		},
 	}
 

@@ -30,6 +30,7 @@ func (e *MockDynamoDB) GetItemRequest(input *dynamodb.GetItemInput) dynamodb.Get
 	req := dynamodb.GetItemRequest{
 		Request: &aws.Request{
 			HTTPRequest: &http.Request{},
+			Retryer: aws.NoOpRetryer{},
 		},
 	}
 

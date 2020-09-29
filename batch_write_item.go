@@ -25,6 +25,7 @@ func (e *MockDynamoDB) BatchWriteItemRequest(input *dynamodb.BatchWriteItemInput
 	req := dynamodb.BatchWriteItemRequest{
 		Request: &aws.Request{
 			HTTPRequest: &http.Request{},
+			Retryer: aws.NoOpRetryer{},
 		},
 	}
 

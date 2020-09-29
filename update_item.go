@@ -37,6 +37,7 @@ func (e *MockDynamoDB) UpdateItemRequest(input *dynamodb.UpdateItemInput) dynamo
 	req := dynamodb.UpdateItemRequest{
 		Request: &aws.Request{
 			HTTPRequest: &http.Request{},
+			Retryer: aws.NoOpRetryer{},
 		},
 	}
 

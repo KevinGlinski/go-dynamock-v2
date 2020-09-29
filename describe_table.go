@@ -25,6 +25,7 @@ func (e *MockDynamoDB) DescribeTableRequest(input *dynamodb.DescribeTableInput) 
 	req := dynamodb.DescribeTableRequest{
 		Request: &aws.Request{
 			HTTPRequest: &http.Request{},
+			Retryer: aws.NoOpRetryer{},
 		},
 	}
 
